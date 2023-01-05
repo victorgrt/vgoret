@@ -35,35 +35,12 @@
     </nav>
   </div>
 </header>
-  <div class="blog-section">
-    <div class="container">
-      <div class="blog-post">
+<div>
+      <div class="blog">
         <h1>ft_printf   <a href="./sujets/ft_printffr.pdf" class="download">ft_printffr.pdf</a></h1>
         <p> "Parce que putstr et putnbr, ça va bien 2 minutes."</p>
         <p>Salut, développeur ! Tu te demandes peut-être ce qu'est la fonction printf ? Et bien c'est une fonction très utile qui te permet d'afficher du texte à l'écran. Mais ce n'est pas tout ! Avec printf, tu peux également insérer des valeurs numériques ou des variables directement dans ton texte grâce aux arguments variadiques. Cela signifie que tu peux créer un message qui s'adaptera automatiquement à tes données, sans avoir à tout réécrire à chaque fois. C'est un peu comme si tu avais un texte qui s'assemblait tout seul ! Alors n'hésite pas à utiliser printf pour afficher tes messages de manière flexible et pratique.</p>
-        <pre class="okaidia">int	ft_printf(const char *format, ...)
-            {
-                va_list	args;
-                int		i;
-                int		len;
-            
-                va_start(args, format);
-                i = 0;
-                len = 0;
-                while (format[i])
-                {
-                    if (format[i] == '%')
-                    {
-                        len += print_arg(args, format[i + 1]);
-                        i++;
-                    }
-                    else
-                        len += ft_putchar(format[i]);
-                    i++;
-                }
-                va_end(args);
-                return (len);
-            }</pre>
+        <script src="https://gist.github.com/victorgrt/880df9c2131f31fba6c3fbe39616755c.js"></script>
       <p>La fonction ft_printf prend en argument un chaîne de caractères (const char*) nommée "format" et un nombre indéterminé d'arguments supplémentaires (indiqués par ...). Ces arguments sont stockés dans une liste nommée "args" grâce à la macro va_start.
 
 Ensuite, la boucle while parcourt chaque caractère de la chaîne "format". Si le caractère actuel est un '%', cela signifie qu'un argument doit être inséré à cet endroit. Dans ce cas, la fonction print_arg est appelée avec comme arguments la liste "args" et le caractère suivant dans la chaîne "format". Si le caractère actuel n'est pas un '%', il est simplement affiché à l'écran avec ft_putchar.
@@ -77,9 +54,8 @@ Le code gère également d'autres valeurs possibles pour "format", comme 'p' pou
 
 Enfin, la fonction retourne le nombre total de caractères affichés</p>    
 </div>
-  </div>
-</body>
 </div>
+</body>
 <footer>
   <div class="container">
     <div id="footer-left">
