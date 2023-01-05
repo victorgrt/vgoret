@@ -1,116 +1,110 @@
+body .gist .gist-file {
+  margin-bottom: 0;
+  border: 1px;
+  border-radius: 0;
+}
+
+body .gist .gist-data {
+  border-bottom: none;
+  border-radius: 0;
+  background-color: black;
+}
+
+body .gist .blob-wrapper {
+  border-radius: 0;
+}
+
+body .gist .highlight {
+  background-color: transparent;
+  font-family: 'Droid Sans Mono', monospace;
+  font-size: 14px;
+}
+
+body .gist .highlight td {
+  padding: 5px 15px !important;
+  line-height: 1;
+  font-family: inherit;
+  font-size: inherit;
+  color: white;
+}
+
+body .gist tr:first-child td {
+  padding-top: 15px !important;
+}
+
+body .gist tr:last-child td {
+  padding-bottom: 15px !important;
+}
+
+body .gist .blob-num {
+  color: white;
+  background-color: #495057;
+  pointer-events: none;
+}
+
+body .gist .gist-meta {
+  display: none;
+}
+
 body {
     background-color: black;
-    color:#fff;
+    color: white;
     margin: 0;
     padding: 0;
     font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
-}
+  }
+  
+  img{
+    max-width: 100%;
+    max-height: 80%;
+    display : block;
+  }
+  
+    header {
+      color: #fff;
+      padding: 10px 0;
+      background-color: black;
+    }
+    
+    #bright-toggle img{
+      width: 25px;
+      vertical-align:bottom;
+    }
+  
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    nav li {
+      margin: 0 10px;
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+    
+    nav a:hover {
+      color: #ccc;
+    }
 
-img{
-  max-width: 100%;
-  max-height: 80%;
-  display : block;
-}
-
-  header {
-    color: inherit;
-    padding: 10px 0;
-    background-color: black;
-  }
   
-  #bright-toggle img{
-    width: 25px;
-    vertical-align:bottom;
-  }
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  nav li {
-    margin: 0 10px;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: all 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #ccc;
-  }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .blog-section {
-    padding: 50px 0;
-  }
-  
-  .blog-section h2 {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-
   .blog-post {
+    color : white;
     padding: 1%;
-    color: inherit;
     overflow: hidden;
     margin-bottom: 10px;
     margin-right: 1%;
+    background-color: black;
     border: 3px solid white;
     box-shadow: 8px 8px 0 -3px black, 8px 8px 0 0 white;
 }
-
-  .blog-post h3 {
-    color: inherit;
-    font-size: 20px;
-    text-align: center;
-  }
   
-  .blog-post p {
-    font-size: 16px;
-    line-height: 1.5;
-    padding: 10px;
-    color : inherit;
-  }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .download{
-    text-decoration: none;
-    color:blue;
-    font-size: 16px;
-  }
-
-  #bright-toggle:hover {
-    color: #ccc;
-  }
-
-  #bright-toggle{
-    border: none;
-    cursor: pointer;
-    outline: none;
-    background-color: black;
-  }
-
   #footer-left img {
     width: 50px;
     height: 50px;
@@ -124,7 +118,7 @@ img{
     margin: 0;
   }
     footer {
-      margin-top: 2%;
+      padding: 10px;
       background-color: black;
       color: white;
       display: flex;
@@ -160,19 +154,60 @@ img{
     align-items: center;
     max-width: 25%;
   }
- body.bright{
-  background-color: white;
-  color : black;
- }
 
- div.bright{
-  background-color: inherit;
-  color: inherit;
- }
+  .download{
+    text-decoration: none;
+    color:lightblue;
+    font-size: 16px;
+  }
 
- .logo_footer {
-  display:flex;
-  width: 50%;
-  aspect-ratio: 3/2;
-  object-fit: contain;
-}
+  #bright-toggle{
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: black;
+  }
+
+  .logo_footer {
+    display:flex;
+    align-items: center;
+    max-width: 25%;
+  }
+
+  body.bright{
+    background-color: white;
+    color:black;
+    transition: all 0.3s ease;
+  }
+  
+  body.bright > div > div{
+    border: 3px solid black;
+    box-shadow: 8px 8px 0 -3px white, 8px 8px 0 0 black;
+    background-color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  body.bright > div > div > a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  }
+
+  body > div > div{
+    border: 3px solid white;
+    box-shadow: 8px 8px 0 -3px black, 8px 8px 0 0 white;
+    background-color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 3%;
+    padding: 3%;
+  }
+  
+  body > div > div > a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  }

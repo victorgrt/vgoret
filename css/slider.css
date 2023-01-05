@@ -102,12 +102,12 @@ nav a:hover {
       margin: 0;
     }
       footer {
-        margin-left: 5%;
+        padding: 10px;
         background-color: black;
         color: white;
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
      }
      
      .footer-left {
