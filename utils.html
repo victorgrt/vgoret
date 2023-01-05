@@ -1,0 +1,134 @@
+Header /
+<header>
+    <nav>
+      <ul>
+        <li><a href="vgoret.html">vgoret</a></li>
+        <button id="bright-toggle">
+          <img src="./img/logo-src/soleil.png" id="img" alt="Logo">
+  </button>
+  <script>
+    const brightToggle = document.getElementById('bright-toggle');
+    var bouton = document.getElementById('bright-toogle');
+    var image = document.getElementById('img');
+    var imageActuelle = "./img/logo-src/soleil.png";
+    brightToggle.addEventListener('click', () => {
+      document.body.classList.toggle('bright');
+      if (imageActuelle === "./img/logo-src/soleil.png") {
+        image.src = "./img/logo-src/lune.png";
+        imageActuelle = "./img/logo-src/lune.png";
+      } else {
+        image.src = "./img/logo-src/soleil.png";
+        imageActuelle = "./img/logo-src/soleil.png";
+      }
+      });
+      </script>
+        <li><a href="#">Loupe</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+CSS / <style>
+ #bright-toggle{
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: black;
+  }
+
+  img{
+  max-width: 100%;
+  max-height: 80%;
+  display : block;
+}
+
+  header {
+    color: #fff;
+    padding: 10px 0;
+    background-color: black;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ccc;
+  }
+
+</style>
+
+Footer /
+<div id="footer-left">
+    <ul>
+        <li><a href="vgoret.html">vgoret</a></li>
+        <li><a href="libft.html">libft</a></li>
+        <li><a href="ft_printf.html">ft_printf</a></li>
+        <li><a href="get_next_line.html">get_next_line</a></li>
+        <li><a href="born2beroot.html">born2beroot</a></li>
+        <li><a href="makefile.html">Makefile</a></li>
+        <li><a href="#">robots.html</a></li>
+        <li><a href="contact.html">Contact</a></li>
+   </ul>
+  <div id="footer-right">
+    <ul>
+      <li><a href="https://profile.intra.42.fr/users/vgoret" class="logo_footer"><img src="./img/42icon.png" alt="Logo">42intra</a></li>
+      <li><a href="https://github.com/victorgrt" class="logo_footer"><img src="./img/github.png" alt="Logo">Github</a></li>
+      <li><a href="https://www.linkedin.com/in/vgoret/" class="logo_footer"><img src="./img/linkedin.png" alt="Logo">Linkedin</a></li>
+   </ul>
+  </div>
+</div>
+</footer>
+
+css
+
+.logo_footer {
+  display:flex;
+  align-items: center;
+  max-width: 25%;
+}
+
+footer {
+  margin-top: 2%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-right {
+  flex: 1;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+footer a {
+  color: white;
+}

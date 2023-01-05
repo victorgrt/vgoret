@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="./img/logo-src/lettre-v.png" type="image/png"> 
+  <title>vgoret</title>
+  <link rel="stylesheet" type="text/css" href="./css/slider.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="vgoret.html">vgoret</a></li>
+      </ul>
+    </nav>
+</header>
+  <div class="image-container">
+    <button class="nav-button prev">&lt;</button>
+    <button class="nav-button next">&gt;</button>
+  </div>
+
+  <script>
+    const images = [
+    './img/slider/cyberpunk_japan.png',
+      './img/slider/london.png',
+      './img/slider/oceanundertheocean.png',
+      './img/slider/steampunk2.png',
+      './img/slider/car_in_the_moutains.png',
+      './img/slider/campfire.png',
+      './img/slider/plain_over_city.png',
+      './img/slider/wizard house.png',
+      './img/slider/cowboy.png',
+      './img/slider/eye.png',
+      // Ajoutez autant d'images que vous le souhaitez ici
+    ];
+
+    let currentIndex = 0;
+    let imageElement;
+    const prevButton = document.querySelector('.nav-button.prev');
+    const nextButton = document.querySelector('.nav-button.next');
+
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateImageElement();
+    });
+
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateImageElement();
+    });
+
+    function updateImageElement() {
+      if (imageElement) {
+        imageElement.remove();
+      }
+
+      imageElement = document.createElement('img');
+      imageElement.src = images[currentIndex];
+      imageElement.id = `image-${currentIndex + 1}`;
+      document.querySelector('.image-container').appendChild(imageElement);
+    }
+
+    updateImageElement();
+  </script>
+</body>
+<footer>
+    <div class="container">
+      <div id="footer-left">
+        <ul>
+          <li><a href="vgoret.html">./vgoret</a></li>
+          <li><a href="libft.html">./libft</a></li>
+          <li><a href="ft_printf.html">./ft_printf</a></li>
+          <li><a href="get_next_line.html">./get_next_line</a></li>
+          <li><a href="born2beroot.html">./born2beroot</a></li>
+          <li><a href="makefile.html">./Makefile</a></li>
+          <li><a href="robots.html">./robots.html</a></li>
+          <li><a href="contact.html">./Contact</a></li>
+       </ul>
+      <div id="footer-right">
+        <ul>
+          <li><a href="https://profile.intra.42.fr/users/vgoret" class="logo_footer"><img src="./img/logo-src/42icon.png" alt="Logo">42intra</a></li>
+          <li><a href="https://github.com/victorgrt" class="logo_footer"><img src="./img/logo-src/github.png" alt="Logo">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/vgoret/" class="logo_footer"><img src="./img/logo-src/linkedin.png" alt="Logo">Linkedin</a></li>
+       </ul>
+      </div>
+    </div>
+    </footer>
+</html>

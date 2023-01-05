@@ -1,0 +1,84 @@
+<html>
+<head>
+  <head>
+    <link rel="icon" href="./img/logo-src/lettre-v.png" type="image/png"> 
+    <title>vgoret</title>
+    <link rel="stylesheet" type="text/css" href="./css/contact.css">
+  </head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="vgoret.html">vgoret</a></li>
+        <button id="bright-toggle">
+          <img src="./img/logo-src/soleil.png" id="img" alt="Logo">
+  </button>
+  <script>
+    const brightToggle = document.getElementById('bright-toggle');
+    var bouton = document.getElementById('bright-toogle');
+    var image = document.getElementById('img');
+    var imageActuelle = "./img/logo-src/soleil.png";
+    brightToggle.addEventListener('click', () => {
+      document.body.classList.toggle('bright');
+      if (imageActuelle === "./img/logo-src/soleil.png") {
+        image.src = "./img/logo-src/lune.png";
+        imageActuelle = "./img/logo-src/lune.png";
+      } else {
+        image.src = "./img/logo-src/soleil.png";
+        imageActuelle = "./img/logo-src/soleil.png";
+      }
+      });
+      </script>
+      </ul>
+    </nav>
+  </div>
+</header>
+  <main>
+    <section>
+      <h2>Formulaire de contact</h2>
+      <form>
+        <label for="nom">Nom :</label><br>
+        <input type="text" id="nom" name="nom"><br>
+        <label for="email">Adresse email :</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="objet">Objet :</label><br>
+        <input type="text" id="objet" name="objet"><br>
+        <label for="message">Message :</label><br>
+        <textarea id="message" name="message" rows="10" cols="30"></textarea><br>
+        <input type="submit" value="Envoyer">
+      </form> 
+    </section>
+    <section class="infos">
+      <h2>Informations de contact</h2>
+      <p>Vous pouvez également nous contacter via les informations suivantes :</p>
+      <ul>
+        <li>Téléphone : +33 (0)1 23 45 67 89</li>
+        <li>Email : contact@example.com</li>
+        <li>Adresse : 12 rue de la Paix, 75001 Paris</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div id="footer-left">
+        <ul>
+          <li><a href="vgoret.html">vgoret</a></li>
+          <li><a href="libft.html">libft</a></li>
+          <li><a href="ft_printf.html">ft_printf</a></li>
+          <li><a href="get_next_line.html">get_next_line</a></li>
+          <li><a href="born2beroot.html">born2beroot</a></li>
+          <li><a href="makefile.html">Makefile</a></li>
+          <li><a href="robots.html">robots.html</a></li>
+          <li><a href="contact.html">Contact</a></li>
+       </ul>
+      <div id="footer-right">
+        <ul>
+          <li><a href="https://profile.intra.42.fr/users/vgoret" class="logo_footer"><img src="./img/logo-src/42icon.png" alt="Logo">42intra</a></li>
+          <li><a href="https://github.com/victorgrt" class="logo_footer"><img src="./img/logo-src/github.png" alt="Logo">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/vgoret/" class="logo_footer"><img src="./img/logo-src/linkedin.png" alt="Logo">Linkedin</a></li>
+       </ul>
+      </div>
+    </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="./img/lettre-v.png" type="image/png"> 
+  <title>vgoret</title>
+  <link rel="stylesheet" type="text/css" href="./css/lll.css">
+</head>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="vgoret.html">vgoret</a></li>
+        <button id="bright-toggle">
+          <img src="soleil.png" id="img" alt="Logo">
+  </button>
+  <script>
+    const brightToggle = document.getElementById('bright-toggle');
+    var bouton = document.getElementById('bright-toogle');
+    var image = document.getElementById('img');
+    var imageActuelle = "soleil.png";
+    brightToggle.addEventListener('click', () => {
+      document.body.classList.toggle('bright');
+      if (imageActuelle === "soleil.png") {
+        image.src = "lune.png";
+        imageActuelle = "lune.png";
+      } else {
+        image.src = "soleil.png";
+        imageActuelle = "soleil.png";
+      }
+      });
+      </script>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  <div class="total">
+      <div>
+        <h1>ft_printf   <a href="ft_printffr.pdf" class="download">ft_printffr.pdf</a></h1>
+        <p> "Parce que putstr et putnbr, ça va bien 2 minutes."</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor omnis, accusamus optio magnam sed reprehenderit veniam recusandae rem ducimus dignissimos, harum aliquam enim quaerat ad ab maiores aliquid repellendus. Magni.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A necessitatibus et doloribus aut doloremque, placeat quo animi deserunt impedit velit sequi quibusdam illum fugiat, quae officia sunt voluptatem laborum soluta.</p>
+    </div>
+  </div>
+</body>
+</div>
+<footer>
+  <div class="container">
+    <div id="footer-left">
+      <ul>
+        <li><a href="vgoret.html">./vgoret</a></li>
+        <li><a href="libft.html">./libft</a></li>
+        <li><a href="ft_printf.html">./ft_printf</a></li>
+        <li><a href="get_next_line.html">./get_next_line</a></li>
+        <li><a href="born2beroot.html">./born2beroot</a></li>
+        <li><a href="makefile.html">./Makefile</a></li>
+        <li><a href="robots.html">./robots.html</a></li>
+        <li><a href="contact.html">./Contact</a></li>
+     </ul>
+    <div id="footer-right">
+      <ul>
+        <li><a href="https://profile.intra.42.fr/users/vgoret" class="logo_footer"><img src="./img/42icon.png" alt="Logo">42intra</a></li>
+        <li><a href="https://github.com/victorgrt" class="logo_footer"><img src="./img/github.png" alt="Logo">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/vgoret/" class="logo_footer"><img src="./img/linkedin.png" alt="Logo">Linkedin</a></li>
+     </ul>
+    </div>
+  </div>
+  </footer>
+</html>

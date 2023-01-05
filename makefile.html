@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="./img/logo-src/lettre-v.png" type="image/png"> 
+    <title>vgoret</title>
+  <link rel="stylesheet" type="text/css" href="./css/libft.css">
+</head>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="vgoret.html">vgoret</a></li>
+        <button id="bright-toggle">
+          <img src="./img/logo-src/soleil.png" id="img" alt="Logo">
+  </button>
+  <script>
+    const brightToggle = document.getElementById('bright-toggle');
+    var bouton = document.getElementById('bright-toogle');
+    var image = document.getElementById('img');
+    var imageActuelle = "./img/logo-src/soleil.png";
+    brightToggle.addEventListener('click', () => {
+      document.body.classList.toggle('bright');
+      if (imageActuelle === "./img/logo-src/soleil.png") {
+        image.src = "./img/logo-src/lune.png";
+        imageActuelle = "./img/logo-src/lune.png";
+      } else {
+        image.src = "./img/logo-src/soleil.png";
+        imageActuelle = "./img/logo-src/soleil.png";
+      }
+      });
+      </script>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  <div class="blog-section">
+    <div class="container">
+      <div class="blog-post">
+        <h1>Makefile</h1>
+        <p> "Quitte à en faire un autant qu'il soit jolie"</p>
+        <p>Un makefile est un fichier utilisé par la commande "make" pour automatiser la compilation de programmes en C ou en C++. Il spécifie les cibles à construire, ainsi que les dépendances et les commandes nécessaires pour construire chaque cible.
+
+          L'utilisation d'un makefile présente de nombreux avantages pour les développeurs. Tout d'abord, cela permet d'automatiser la compilation de programmes, ce qui peut être particulièrement utile lorsque le code source est volumineux ou que de nombreux fichiers sont impliqués dans le projet. En utilisant un makefile, vous n'avez pas à retaper manuellement les commandes de compilation chaque fois que vous modifiez le code source.
+          
+          Pour créer un makefile, il suffit de créer un fichier texte nommé "makefile" (ou "Makefile" si votre système d'exploitation est sensible à la casse) et de commencer à écrire les règles de compilation. Chaque règle commence par le nom de la cible, suivi d'un signe ":", puis des dépendances séparées par des espaces. Ensuite, vous pouvez écrire les commandes de compilation nécessaires pour construire la cible en utilisant une tabulation au début de chaque ligne.
+          
+          Voici un exemple de makefile simple qui compile un programme "hello.c" :
+          
+          hello: hello.c
+          gcc -o hello hello.c
+          
+          Ce makefile contient une seule règle qui indique que la cible "hello" dépend du fichier "hello.c" et que la commande "gcc -o hello hello.c" doit être utilisée pour la construire. Pour utiliser ce makefile, vous pouvez simplement exécuter la commande "make" dans votre terminal, et le programme "hello" sera automatiquement compilé.<p>
+        <pre class="okaidia">
+            # ! ARGUMENTS ! #
+            
+            NAME	=	libft.a
+            CCFLAGS	=	-Wall -Werror -Wextra
+            CC		=	gcc
+            
+            # * SRC * #
+            
+            SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
+                ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c	\
+                ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c	\
+                ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c \
+                ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
+                ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c \
+            
+            OBJ = ${SRC:.c=.o}
+            
+            # ? RULES ? #
+            
+            all: ${NAME} 
+            
+            ${NAME} : ${OBJ}
+                ${CC} ${OBJ} -o ${NAME} (...)</pre>
+      <p>Maintenant qu'on y voit plus clair on va pouvoir commencer à s'ammuser. Pourquoi pas ajouter de la couleur ?</p>
+    <p>Bon maintenant on va rentrer dans la partie ou vous pouvez faire plus ou moins ce que vous voullez avec le ASII Art, que ce soit pour un texte ou un pixel art.</p>
+    <p> Finalement on va ajouter une barre de chargement. Celle là n'est pas parfaite mais c'est un bon debut.</p>
+    </div>
+  </div>
+</body>
+</div>
+<footer>
+  <div class="container">
+    <div id="footer-left">
+      <ul>
+        <li><a href="vgoret.html">./vgoret</a></li>
+        <li><a href="libft.html">./libft</a></li>
+        <li><a href="ft_printf.html">./ft_printf</a></li>
+        <li><a href="get_next_line.html">./get_next_line</a></li>
+        <li><a href="born2beroot.html">./born2beroot</a></li>
+        <li><a href="makefile.html">./Makefile</a></li>
+        <li><a href="robots.html">./robots.html</a></li>
+        <li><a href="contact.html">./Contact</a></li>
+     </ul>
+    <div id="footer-right">
+      <ul>
+        <li><a href="https://profile.intra.42.fr/users/vgoret" class="logo_footer"><img src="./img/logo-src/42icon.png" alt="Logo">42intra</a></li>
+        <li><a href="https://github.com/victorgrt" class="logo_footer"><img src="./img/logo-src/github.png" alt="Logo">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/vgoret/" class="logo_footer"><img src="./img/logo-src/linkedin.png" alt="Logo">Linkedin</a></li>
+     </ul>
+    </div>
+  </div>
+  </footer>
+</html>
