@@ -244,3 +244,24 @@ img{
   align-items: center;
   max-width: 25%;
 }
+
+.logo_contact{
+  display: flex;
+  align-items: center;
+  padding-bottom: 3%;
+}
+
+.logo_contact img{
+  width: 8%;
+  border-radius: 50%;
+  padding-right: 2%;
+}
+
+a.logo_contact {
+  text-decoration: none;
+  color: coral;
+}
+
+ul a:hover{
+  color:red;
+}
