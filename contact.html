@@ -33,6 +33,36 @@
     </nav>
   </div>
 </header>
+<div id="repo-list">
+	<img src="./img/vgoret.jpg" class="photo">
+	<div class="gauche">
+	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	  <script>$.ajax({
+		url: 'https://api.github.com/user/repos',
+		type: 'GET',
+		headers: {
+		  'Authorization': 'Token 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'
+		},
+		success: function(data) {
+		  $.each(data, function(index, repo) {
+			// Récupération du nombre de commits et de la date de création du dépôt
+			$.ajax({
+			  url: 'https://api.github.com/repos/' + repo.owner.login + '/' + repo.name + '/commits',
+			  type: 'GET',
+			  headers: {
+				'Authorization': 'Token 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'
+			  },
+			  success: function(commits) {
+				$('.gauche').append('<strong>' + repo.name + '</strong>' + ': ' + commits.length + ' commits, créé le ' + repo.created_at + '<br><br>');
+			  }
+			});
+		  });
+		}
+	  });
+	  
+	  </script>
+	</div>
+  </div>
   <main>
     <section>
       <h2>Formulaire de contact</h2>
@@ -62,16 +92,17 @@
     <div class="container">
       <div id="footer-left">
         <ul>
-          <li><a href="vgoret.html">vgoret</a></li>
-          <li><a href="libft.html">libft</a></li>
-          <li><a href="ft_printf.html">ft_printf</a></li>
-          <li><a href="get_next_line.html">get_next_line</a></li>
-          <li><a href="born2beroot.html">born2beroot</a></li>
-          <li><a href="makefile.html">Makefile</a></li>
-          <li><a href="robots.html">robots.html</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="vgoret.html">./vgoret</a></li>
+          <li><a href="libft.html">./libft</a></li>
+          <li><a href="ft_printf.html">./ft_printf</a></li>
+          <li><a href="get_next_line.html">./get_next_line</a></li>
+          <li><a href="born2beroot.html">./born2beroot</a></li>
+          <li><a href="makefile.html">./Makefile</a></li>
+          <li><a href="robots.html">./robots.html</a></li>
+          <li><a href="contact.html">./Contact</a></li>
        </ul>
     </div>
     </footer>
 </body>
 </html>
+
