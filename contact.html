@@ -37,11 +37,12 @@
 	<img src="./img/vgoret.jpg" class="photo">
 	<div class="gauche">
 	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	  <script>$.ajax({
+	  <script>
+    $.ajax({
 		url: 'https://api.github.com/user/repos',
 		type: 'GET',
 		headers: {
-		  'Authorization': 'Token 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'
+		  'Authorization': 'Token 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'
 		},
 		success: function(data) {
 		  $.each(data, function(index, repo) {
@@ -50,7 +51,7 @@
 			  url: 'https://api.github.com/repos/' + repo.owner.login + '/' + repo.name + '/commits',
 			  type: 'GET',
 			  headers: {
-				'Authorization': 'Token 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'
+				'Authorization': 'Token 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'
 			  },
 			  success: function(commits) {
 				$('.gauche').append('<strong>' + repo.name + '</strong>' + ': ' + commits.length + ' commits, créé le ' + repo.created_at + '<br><br>');

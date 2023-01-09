@@ -265,3 +265,19 @@ a.logo_contact {
 ul a:hover{
   color:red;
 }
+
+#repo-list{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+  }
+  
+  .photo{
+	border-radius : 100%;
+	width: 20%;
+  }
+  
+  .gauche{
+	color:white;
+	border-color: 1px solid white;
+  }
