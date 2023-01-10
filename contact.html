@@ -42,7 +42,7 @@ $.ajax({
   url: 'https://api.github.com/user/repos',
   type: 'GET',
   headers: {
-    'Authorization': 'Token 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'
+    'Authorization': 'Token '
   },
   success: function(data) {
     $.each(data, function(index, repo) {
@@ -53,7 +53,7 @@ $.ajax({
 			  url: 'https://api.github.com/repos/' + repo.owner.login + '/' + repo.name + '/commits',
 			  type: 'GET',
 			  headers: {
-				'Authorization': 'Token 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'
+				'Authorization': 'Token '
 			  },
 			  success: function(commits) {
                 var lastCommit = commits[0];
