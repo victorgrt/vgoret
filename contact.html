@@ -38,28 +38,34 @@
 	<div class="gauche">
 	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	  <script>
-    $.ajax({
-		url: 'https://api.github.com/user/repos',
-		type: 'GET',
-		headers: {
-		  'Authorization': 'Token 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'
-		},
-		success: function(data) {
-		  $.each(data, function(index, repo) {
-			// Récupération du nombre de commits et de la date de création du dépôt
-			$.ajax({
+$.ajax({
+  url: 'https://api.github.com/user/repos',
+  type: 'GET',
+  headers: {
+    'Authorization': 'Token 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'
+  },
+  success: function(data) {
+    $.each(data, function(index, repo) {
+        var date = new Date(repo.created_at);
+        var formattedDate = date.toLocaleDateString("fr-FR", { day: "numeric", month: "numeric", year: "numeric" });
+		  // Récupération du nombre de commits et de la date de création du dépôt
+		  $.ajax({
 			  url: 'https://api.github.com/repos/' + repo.owner.login + '/' + repo.name + '/commits',
 			  type: 'GET',
 			  headers: {
-				'Authorization': 'Token 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'
+				'Authorization': 'Token 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'
 			  },
 			  success: function(commits) {
-				$('.gauche').append('<strong>' + repo.name + '</strong>' + ': ' + commits.length + ' commits, créé le ' + repo.created_at + '<br><br>');
+                var lastCommit = commits[0];
+                var lastCommitDate = new Date(lastCommit.commit.committer.date);
+                var lastCommitFormattedDate = lastCommitDate.toLocaleDateString("fr-FR", { day: "numeric", month: "numeric", year: "numeric" });
+				$('.gauche').append('<strong>' + repo.name + '</strong>' + ': ' + commits.length + ' commits, créé le ' + formattedDate + ', dernier commit le ' + lastCommitFormattedDate + '<br><br>');
 			  }
 			});
 		  });
-		}
-	  });
+	  }
+});
+
 	  
 	  </script>
 	</div>

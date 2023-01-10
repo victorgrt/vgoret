@@ -279,5 +279,7 @@ ul a:hover{
   
   .gauche{
 	color:white;
-	border-color: 1px solid white;
+  padding: 2% 2% 2% 2%;
+  border: 3px solid white;
+  box-shadow: 8px 8px 0 -3px black, 8px 8px 0 0 white;
   }
