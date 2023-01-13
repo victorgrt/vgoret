@@ -41,7 +41,6 @@ nav a:hover {
 
     body {
         background-color: black;
-        overflow: hidden;
     }
 
 
@@ -53,6 +52,7 @@ nav a:hover {
     }
 
     .image-container img {
+
     }
 
     .nav-button {
@@ -152,8 +152,6 @@ nav a:hover {
      body {
       background-color: black;
       color: white;
-      margin: 0;
       transition: all 0.3s ease;
-      padding: 0;
       font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
     }
