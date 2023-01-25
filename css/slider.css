@@ -7,7 +7,7 @@
 
 img{
 max-width: 100%;
-max-height: 80%;
+max-height: 90%;
 display : block;
 }
 
@@ -49,10 +49,6 @@ nav a:hover {
       align-items: center;
       justify-content: center;
       position: relative;
-    }
-
-    .image-container img {
-
     }
 
     .nav-button {

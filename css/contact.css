@@ -15,8 +15,6 @@ img{
     padding: 10px 0;
     background-color: black;
   }
-  
-  
 
   nav ul {
     list-style: none;
@@ -127,63 +125,6 @@ img{
   body.bright > div > section{
     background-color: white;
   }
-  
- body.bright > form {
-    display: flex;
-    flex-direction: column;
-    color:white;
-    align-items: stretch;
-    width: 100%;
-      color : white;
-      padding: 1%;
-      overflow: hidden;
-      margin-bottom: 10px;
-      margin-right: 1%;
-      background-color: inherit;
-      border: 3px solid white;
-      box-shadow: 8px 8px 0 -3px black, 8px 8px 0 0 white;
-  }
-
-  body > form {
-    display: flex;
-    flex-direction: column;
-    color:white;
-    align-items: stretch;
-    width: 100%;
-      color : white;
-      padding: 1%;
-      overflow: hidden;
-      margin-bottom: 10px;
-      margin-right: 1%;
-      background-color: inherit;
-      border: 3px solid white;
-      box-shadow: 8px 8px 0 -3px black, 8px 8px 0 0 white;
-  }
-
-  form label {
-    margin-bottom: 5px;
-  }
-  
-  form input,
-  form textarea {
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 4px;
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  
-  form input[type="submit"] {
-    background-color: #006699;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  form input[type="submit"]:hover {
-    background-color: #004c66;
-  }
-  
 
   main.bright{
     color:black;
@@ -201,21 +142,12 @@ img{
       box-shadow: 8px 8px 0 -3px black, 8px 8px 0 0 white;
 }
 
-
-#footer-left img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
 #footer-left p {
   font-size: 14px;
   margin: 0;
 }
   footer {
-    margin-top: 2%;
+    padding: 10px;
     background-color: black;
     color: white;
     display: flex;
